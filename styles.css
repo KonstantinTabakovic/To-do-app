@@ -100,3 +100,6 @@ label{
 .items{
   display: flex;
 }
+.filters input[type="radio"]{
+  opacity: 0;
+}
