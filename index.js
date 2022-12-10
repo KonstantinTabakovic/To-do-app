@@ -1,6 +1,9 @@
-/* Count Items left */
+/* Count Items */
 const itemCount = document.querySelector('.count span');
+const mobCount = document.querySelector('.mob-count span');
+
 itemCount.innerText = document.querySelectorAll('.list').length;
+mobCount.innerText = document.querySelectorAll('.list').length;
 
 /*Add items */
 const addButton = document.querySelector('.todo-input button');
@@ -42,3 +45,18 @@ function addItems(text){
 function updateCount(num) {
     itemCount.innerText = +itemCount.innerText + num;
 }
+
+/* Change Theme */
+const themeIcon = document.querySelector('.theme');
+
+themeIcon.addEventListener('click',()=>{
+    document.body.classList.toggle('light')
+    if(document.body.classList.contains('light')){
+        themeIcon.src = 'images/icon-moon.svg'
+    }else{
+        themeIcon.src = 'images/icon-sun.svg'
+    }
+})
+
+/* REORDER */
+Sortable.create(simpleList);
