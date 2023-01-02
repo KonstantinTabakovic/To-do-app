@@ -1,60 +1,104 @@
-<!DOCTYPE html>
+<!doctype html>
+
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Rubik+Bubbles&display=swap" rel="stylesheet">
+  <link rel="icon" href="img/logo.png" type="image/x-icon">
+  <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
 
-    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png"/>
 
-    <title>Frontend Mentor | Todo app</title>
+  <title>News website</title>
 
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet"/>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <div class="background"></div>
-    <div class="wrapper">
-      <div class="header">
-        <h1>todo</h1>
-        <img class="theme" src="images/icon-sun.svg" alt="theme-icon" />
-      </div>
-      <div class="todo-input">
-        <button></button>
-        <input name="todo-input" id="todo-input" aria-label="todo-input" type="text" placeholder="Create a new todo..."/>
-      </div>
-      <div class="todos">
-        <ul id="simpleList">
-          
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="slick.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
+
+</head>
+
+<body>
+
+    <nav>
+        <img src="img/logo.png" alt="Logo">
+        <ul>
+          <li>
+            <a href="#">Home</a>
+            <ul>
+                <li><a href="#">Element 1</a></li>
+                <li><a href="#">Element 2</a></li>
+                <li><a href="#">Element 3</a></li>
+              </ul>
+        </li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Blog</a></li>
         </ul>
+      </nav>
+
+      <div class="slider-hero">
+        <div>
+          <img class="news5" src="img/4.jpg" />
+          <h3>Opis slike 1</h3>
       </div>
-      <div class="mob">
-        <div class="mob-count"><span></span> items left</div>
-        <div class="mob-clear">Clear Completed</div>
-      </div>
-      <div class="footer">
-        <div class="count"><span></span> items left</div>
-        <div class="filters">
-          <label>
-            <input type="radio" name="filter" id="all" checked />
-            <span>All</span>
-          </label>
-          <label>
-            <input type="radio" name="filter" id="active" />
-            <span>Active</span>
-          </label>
-          <label>
-            <input type="radio" name="filter" id="completed" />
-            <span>Completed</span>
-          </label>
-        </div>
-        <div class="clear">Clear Completed</div>
-      </div>
-      <div class="dragdrop">
-        <p>Drag and drop to reorder list</p>
+      <div>
+          <img class="news6" src="img/5.jpg" />
+          <h3>Opis slike 2</h3>
       </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
-    <script src="index.js"></script>
-  </body>
+
+        <div class="news">NEWS</div>
+
+        <div class="news-holder">
+
+        <div class="box">
+            <div class="ribbon"><span>NEW</span></div>  
+          <img class="news1" src="img/4.jpg" />
+          <h3>Opis slike 1</h3>
+    </div>
+      <div>
+          <img class="news2" src="img/5.jpg" />
+          <h3>Opis slike 2</h3>
+      </div>
+    </div>
+    <div class="news-holder1">
+      <div>
+        <img class="news3" src="img/6.jpg" />
+        <h3>Opis slike 3</h3>
+    </div>
+    <div>
+        <img class="news4" src="img/7.jpg" />
+        <h3>Opis slike 4</h3>
+    </div>
+  </div>
+ 
+  <button class="back-to-top-button"><i class="fa fa-arrow-up" aria-hidden="true"></i></button>
+
+  <!-- HTML for the footer -->
+  <footer class="footer">
+    <!-- Social media icons and copyright message -->
+    <div class="footer-left">
+      <a href="#" class="social-media-icon"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+      <a href="#" class="social-media-icon"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+      <a href="#" class="social-media-icon"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+      <div class="copyright">COPYRIGHT</div>
+    </div>
+  </footer>
+  
+
+        <script
+        src="https://code.jquery.com/jquery-3.6.3.min.js"
+        integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+        crossorigin="anonymous"></script>
+  <script src="app.js"></script>
+  <script src="slick.min.js"></script>
+  
+        <script type="text/javascript">
+          $('.slider-hero').slick({
+          autoplay: true,
+          autoplaySpeed: 2000, 
+});
+        </script>
+
+</body>
 </html>
